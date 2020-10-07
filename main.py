@@ -225,6 +225,5 @@ async def on_message(ctx):
                 print(f"{Fore.WHITE}[{Fore.RED}-{Fore.WHITE}] {hour}:{minute}:{second}{Fore.RED} Privnote Already Read")
 
 
-#credit https://github.com/Ikoavu/Advanced-Discord-Sniper/blob/master/Main.py
 bot.run(token, bot=False)
 
