@@ -116,7 +116,7 @@ async def on_message(ctx):
             except:
                 print(f"{Fore.WHITE}[{Fore.CYAN}!{Fore.WHITE}] {hour}:{minute}:{second} {Fore.YELLOW}Nitro Found! // Sent By: {ctx.author.name}#{ctx.author.discriminator}")
                 nitrotext.write(f"[!] Nitro Found! Sent By: {ctx.author.name}#{ctx.author.discriminator} -- {hour}:{minute}:{second}\n")
-            if len(code) == 24 or code == 16:
+            if len(code) == 24 or len(code) == 16:
                 print(f"{Fore.WHITE}[{Fore.GREEN}+{Fore.WHITE}] {hour}:{minute}:{second}{Fore.GREEN} Testing code : discord.gift/{code}")
                 r = requests
                 result = r.post('https://discordapp.com/api/v6/entitlements/gift-codes/'+code+'/redeem', json={"channel_id":str(ctx.channel.id)}, headers={'authorization':token}).text
